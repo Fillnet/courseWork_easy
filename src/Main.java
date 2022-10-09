@@ -1,8 +1,5 @@
-import java.util.Arrays;
-
 public class Main {
     private static final Employee[] employess = new Employee[5];
-
     public static void main(String[] args) {
         employess[0] = new Employee("Бухгалтерия","Ivan Ivanov Ivanovich", 125547);
         employess[1] = new Employee("ИТ","Petryxa Petrov Valerievich", 115326);
@@ -31,10 +28,7 @@ public class Main {
 //        System.out.println(" Сумма зарплат всех сотрудников равна: " + calculatSumSalary());
 //        System.out.println(" Максимальная зарплата у сотрудника: " + getMaxSalary());
 //        System.out.println(employess[0]);
-
-
     }
-
     public static int calculatSumSalary() {
         int sum = 0;
         for (Employee employee : employess) {
@@ -46,7 +40,6 @@ public class Main {
     }
     public static int getAverageSalary() {
         int average = 0;
-//        Employee workAverageEmploye = null;
         for (Employee employee : employess) {
             if (employee != null) {
                 average += employee.getSalary();
@@ -65,7 +58,6 @@ public class Main {
         }
         return workMinEmployee;
     }
-
         public static Employee getMaxSalary() {
         int max = Integer.MIN_VALUE;
         Employee workMaxEmployee = null;
@@ -77,14 +69,5 @@ public class Main {
         }
         return workMaxEmployee;
     }
-
-
-
-
-
-
-
-
-
 }
 
