@@ -60,8 +60,8 @@ public class Main {
                 average += employee.getSalary();
             }
         }
-            for (Employee employee1 : employess) {
-                if (employee1 != null) {
+            for (Employee employee : employess) {
+                if (employee != null) {
                     total++;
                 }
             }
