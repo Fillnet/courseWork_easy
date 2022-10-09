@@ -1,64 +1,45 @@
-import java.util.Arrays;
-import java.util.OptionalInt;
-import java.util.Random;
-
 public class Employee {
-
     private String fullname;
+    private String department;
     private int salary;
     private final int id;
     private static int count = 0;
-    static int[] sal = generateRandomArray(10);
-    public static int[] generateRandomArray(int size) {
-        int[] array = new int[size];
-        Random random = new Random();
-        for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(( 100000)) + 100000;
-        }
-        return array;
-    }
-    public static int calculateAverage(int[] array) {
-        int sum = sumArray(array);
-        return sum / array.length;
-    }
 
-    public static int sumArray(int[] array) {
-            return Arrays.stream(array).sum();
-        }
-
-    public static OptionalInt getMaxSalary(int[] array) {
-         return Arrays.stream(sal).max();
-    }
-
-
-    public Employee(String fullname) {
+    public Employee(String department ,String fullname, int salary) {
         this.fullname = fullname;
         this.salary = salary;
         this.id = ++count;
-        this.sal[id] = sal[count];
+        this.department = department;
     }
 
-    public static int getSalary() {
-        return sal[count];
-    }
-
-    public int setSalary(int sal[]) {
-        return sal[count];
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    @Override
-    public String toString() {
-        return id + "." + fullname + " =  "  + sal[id];
-    }
-
-    public String employess() {
+    public String getFullname() {
         return fullname;
     }
 
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+    public int getId() {
+        return id;
+    }
+    @Override
+    public String toString() {
+        return id + ". Отдел: "+ department + ". " + fullname + " ,зарплата =  "  + salary + " рублей";
+    }
+    public String employess() {
+        return fullname;
+    }
 
 }
 
