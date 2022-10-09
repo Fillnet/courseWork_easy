@@ -37,9 +37,5 @@ public class Employee {
     public String toString() {
         return id + ". Отдел: "+ department + ". " + fullname + " ,зарплата =  "  + salary + " рублей";
     }
-    public String employess() {
-        return fullname;
-    }
-
 }
 
